@@ -1,40 +1,42 @@
-# Student Performance Prediction using Ensemble Learning
+# Student Performance Prediction using Support Vector Machine (SVM)
 
-[Heroku Deployment URL Placeholder]
+[Heroku Deployment URL](https://ana680-mt-626c1dc6a887.herokuapp.com/)
 
 ## Overview
 
-This project is developed by [Your Name] for the [Your Course/Class Name] at [Your Institution]. It employs an ensemble learning technique, particularly an XGBoost classifier, to predict the race/ethnicity of students based on their performance in math, reading, and writing exams. Despite the challenging nature of predicting race/ethnicity from academic scores, this model strives to demonstrate the application of machine learning for educational data analysis. Please note, there is no correlation between the predictor variables, and thus, the model is not accurate. The purpose of this project is to perform model deployments on Heroku.
+This project is developed by Elijah C Walker for the ANA680 course at National University. It employs a Support Vector Machine (SVM), a supervised machine learning model, to predict the race/ethnicity of students based on their performance in math, reading, and writing exams. The model's prediction accuracy is approximately 34%, indicating the complex nature of the task and the non-deterministic relationship between academic scores and race/ethnicity. The primary goal of this project is to demonstrate the process of model training and deployment rather than deriving a high-accuracy predictive system.
 
 ## Features Used for Prediction
 
-The model makes predictions based on the following features extracted from the Student Performance Dataset:
+The model leverages the following features from the Student Performance Dataset to make predictions:
 
 -   Math Score (`math_score`)
 -   Reading Score (`reading_score`)
 -   Writing Score (`writing_score`)
 
-These scores are the key numerical features available in the dataset that are used as predictors for the race/ethnicity of the students.
+These scores are pivotal quantitative features in the dataset utilized as indicators for predicting the students' race/ethnicity classifications.
 
 ## Tools and Libraries
 
-The model was constructed using the following tools and libraries:
+The construction of the model involved the following tools and libraries:
 
--   Jupyter Notebook: For writing and executing Python code in an interactive environment.
--   XGBoost: An optimized gradient boosting library designed to be highly efficient, flexible, and portable.
--   Pandas: For data manipulation and analysis, particularly for handling structured data.
--   scikit-learn (`sklearn`): For pre-processing data and for dividing the dataset into training and testing sets.
--   Flask: For creating a web application to deploy the model.
--   Heroku: For deploying the web application so that it can be accessed publicly.
+-   Jupyter Notebook: For scripting and testing Python code interactively.
+-   Support Vector Machine (SVM) from scikit-learn: For classification purposes, known for its effectiveness in high-dimensional spaces.
+-   Pandas: For structured data operations and manipulations.
+-   scikit-learn (`sklearn`): For data preprocessing, model training, and evaluation.
+-   Flask: For web application creation, serving as the interface for model deployment.
+-   Heroku: For hosting the Flask application, making it publicly accessible.
 
 ## Model Training
 
-The XGBoost classifier was chosen due to its ability to handle the non-linear relationship between the scores and the race/ethnicity class. The model was trained using the Student Performance Dataset, and special care was taken to preprocess the data appropriately, including handling missing values and encoding categorical features. The dataset was split into training and test sets to evaluate the model's performance.
+The SVM classifier was selected for its effectiveness in classification problems, especially in cases where the relationship between features and classes is not linearly separable. The Student Performance Dataset underwent rigorous preprocessing, including scaling of features and encoding of target classes. The dataset was then divided into a training set and a test set to both train and evaluate the model's performance.
 
-The features were selected based on the hypothesis that academic performance could have some patterns or trends with respect to different groups, which the model might be able to learn and predict. The ensemble method aggregates the results of multiple decision trees to improve the model's predictive accuracy and control over-fitting.
+Feature selection was grounded on the premise that certain trends in academic performance might be discernible and predictable for different racial/ethnic groups. Despite the model's moderate accuracy, it serves as a proof of concept for the deployment of machine learning models.
 
 ## Deployment
 
-The trained model is serialized and deployed using a Flask web application. The application provides a simple and user-friendly interface for inputting the scores and receiving predictions of race/ethnicity. The Heroku platform hosts the application, ensuring it is accessible to users for practical demonstrations and further research.
+The SVM model was serialized and deployed through a Flask web application. The application offers an intuitive interface where users can enter student scores and obtain race/ethnicity predictions. Hosted on Heroku, the application is available for public access to showcase the deployment process and for educational purposes.
 
-[Note: Remember to replace placeholders with actual names and URLs before finalizing the documentation.]
+Please note that the use of race/ethnicity in predictive models is a sensitive topic and should be approached with caution. This model is for educational use only and does not promote or endorse the use of such predictive systems in real-world scenarios where they may contribute to biases or discrimination.
+
+[Note: Always ensure sensitive and personal data is handled according to ethical standards and legal requirements.]
